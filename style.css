@@ -1,6 +1,6 @@
 /* -------------------------------- ESTILOS GERAIS -------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -14,8 +14,35 @@ html {
   list-style-type: none;
 }
 
+:root {
+  --primary-color: #fafafa;
+  --degrade: linear-gradient(90deg, rgba(255, 214, 255, 1) 0%, rgba(231, 198, 255, 1) 25%, rgba(200, 182, 255, 1) 50%, rgba(184, 192, 255, 1) 75%, rgba(187, 208, 255, 1) 100%);
+  --border-degrade: linear-gradient(
+    90deg,
+    rgba(255, 214, 255, 1) 0%,
+    rgba(231, 198, 255, 1) 25%,
+    rgba(200, 182, 255, 1) 50%,
+    rgba(184, 192, 255, 1) 75%,
+    rgba(187, 208, 255, 1) 100%
+  );
+}
+
 body {
   background-color: #000000fb;
+  cursor: pointer;
+  cursor: url("images/arrow.svg"), auto;
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+.moving {
+  cursor: move;
+}
+
+.resize {
+  cursor: nwse-resize;
 }
 
 .line-about-me,
@@ -25,10 +52,11 @@ body {
 .line-social-media {
   width: 600px;
   height: 2px;
-  background: linear-gradient(90deg, rgba(255, 214, 255, 1) 0%, rgba(231, 198, 255, 1) 25%, rgba(200, 182, 255, 1) 50%, rgba(184, 192, 255, 1) 75%, rgba(187, 208, 255, 1) 100%);
+  background: var(--degrade);
   margin-top: 25px;
   margin-left: 50px;
   border-radius: 20px;
+  scroll-margin-top: 300px;
 }
 
 .title-about-me,
@@ -40,10 +68,11 @@ body {
   font-size: 60px;
   font-weight: 600;
   margin-left: 50px;
-  margin-top: 105px;
+  margin-top: 130px;
 }
 
-.paragraph-about-me, .paragraph-contacts {
+.paragraph-about-me,
+.paragraph-contacts {
   color: #fafafa;
   font-size: 20px;
   margin-left: 50px;
@@ -55,13 +84,20 @@ body {
   font-weight: 100;
 }
 
-
+.about-me,
+.projects,
+.contacts {
+  scroll-margin-top: 40px;
+}
 /* -------------------------------- ESTILOS - HOME -------------------------------- */
-
 
 header {
   display: flex !important;
   justify-content: center !important;
+}
+
+#navbar {
+  transition: top 0.4s;
 }
 
 .nav-home {
@@ -75,8 +111,8 @@ header {
 .header-btn {
   text-decoration: none;
   color: #fafafa;
-  padding: 10px;
-  margin: 0 10px;
+  padding: 15px 20px;
+  margin: 0;
   font-size: 18px;
   font-weight: 600;
   background-color: #000000fb;
@@ -85,15 +121,24 @@ header {
 
 .list-home {
   display: flex;
-  border-top: none ! ;
+  border-top: none !;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   justify-content: center;
-  padding: 8px 7px;
   text-decoration: none;
   border: 2px solid rgb(255, 214, 255);
   border-top: none;
-  border: linear-gradient(90deg, rgba(255, 214, 255, 1) 0%, rgba(231, 198, 255, 1) 25%, rgba(200, 182, 255, 1) 50%, rgba(184, 192, 255, 1) 75%, rgba(187, 208, 255, 1) 100%);
+  border: linear-gradient(90deg, #ffd6ff 0%, #e7c6ff 25%, #c8b6ff 50%, #b8c0ff 75%, #bbd0ff 100%);
+}
+
+#nav-home {
+  border-bottom-left-radius: 20px;
+  padding-left: 30px;
+}
+
+#nav-contacts {
+  border-bottom-right-radius: 20px;
+  padding-right: 30px;
 }
 
 .home {
@@ -111,7 +156,7 @@ header {
 .paragraph-home-1,
 .paragraph-home-2 {
   font-size: 85px;
-  background: linear-gradient(90deg, rgba(255, 214, 255, 1) 0%, rgba(231, 198, 255, 1) 25%, rgba(200, 182, 255, 1) 50%, rgba(184, 192, 255, 1) 75%, rgba(187, 208, 255, 1) 100%);
+  background: var(--degrade);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -123,8 +168,7 @@ header {
   display: flex;
   padding: 20px;
   gap: 20px;
-  border: linear-gradient(90deg, rgba(255, 214, 255, 1) 0%, rgba(231, 198, 255, 1) 25%, rgba(200, 182, 255, 1) 50%, rgba(184, 192, 255, 1) 75%, rgba(187, 208, 255, 1) 100%);
-  padding-bottom: 100px;
+  border: var(--border-degrade);
 }
 
 .btn-home a {
@@ -154,7 +198,6 @@ header {
 
 /*-------------------------------- ESTILOS - SOBRE MIM -------------------------------- */
 
-
 .img-about-me {
   width: 60vh;
   border-radius: 32px;
@@ -162,7 +205,6 @@ header {
   margin-right: 200px;
   margin-bottom: 900px;
 }
-
 
 .sobre-mim {
   display: flex;
@@ -172,9 +214,6 @@ header {
   height: 100vh;
   padding-top: 100px;
 }
-
-
-
 
 /* -------------------------------- ESTILOS - FORMAÇÕES --------------------------------*/
 
@@ -200,7 +239,9 @@ header {
   line-height: 32px;
 }
 
-.title5-en-formation, .title5-f-end-formation, .title5-programmer-formation{
+.title5-en-formation,
+.title5-f-end-formation,
+.title5-programmer-formation {
   font-weight: 100;
 }
 
@@ -213,14 +254,16 @@ header {
 
 /* -------------------------------- ESTILOS - CONTATO -------------------------------- */
 
-.icon-email, .icon-linkedin, .icon-github {
+.icon-email,
+.icon-linkedin,
+.icon-github {
   color: #fafafa;
   display: flex;
 }
 
 /* -------------------------------- ESTILOS - REDES SOCIAIS -------------------------------- */
 
-.contacts-social-media{
+.contacts-social-media {
   display: flex;
 }
 
@@ -235,26 +278,28 @@ header {
   letter-spacing: 1px;
 }
 
-#icon-email, #icon-linkedin, #icon-github{
+#icon-email,
+#icon-linkedin,
+#icon-github {
   font-size: 30px;
   margin-left: 50px;
 }
 
-.icons-social-media{
+.icons-social-media {
   margin-top: 50px;
 }
 
-#icon-linkedin{
+#icon-linkedin {
   padding-left: 4px;
 }
 
-#icon-github{
+#icon-github {
   padding-left: 1px;
 }
 /* -------------------------------- ESTILOS - FOOTER -------------------------------- */
 
 .footer {
-  background: linear-gradient(90deg, rgba(255, 214, 255, 1) 0%, rgba(231, 198, 255, 1) 25%, rgba(200, 182, 255, 1) 50%, rgba(184, 192, 255, 1) 75%, rgba(187, 208, 255, 1) 100%);
+  background: var(--degrade);
   color: #fafafa;
   font-size: 20px;
   text-align: center;
@@ -268,7 +313,7 @@ header {
 /* -------------------------------- ESTILOS - SCROLL -------------------------------- */
 
 ::-webkit-scrollbar {
-  width: 12px; /* Largura da barra de rolagem */
+  width: 10px; /* Largura da barra de rolagem */
 }
 
 ::-webkit-scrollbar-track {
@@ -283,4 +328,28 @@ header {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555555; /* Cor da barra de rolagem ao passar o mouse */
+}
+
+/* -------------------------------- ESTILOS - BOTÕES -------------------------------- */
+
+.btn-home-1,
+.btn-home-2,
+.header-btn {
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.5s;
+}
+
+.btn-home-1:hover {
+  box-shadow: inset 0 100px 0 0 #c8b6ff;
+}
+
+.btn-home-2:hover {
+  box-shadow: inset 0 100px 0 0 #c8b6ff;
+}
+
+.header-btn:hover {
+  box-shadow: inset 0 100px 0 0 #c8b6ff;
 }

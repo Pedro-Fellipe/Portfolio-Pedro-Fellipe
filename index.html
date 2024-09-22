@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/4c2fc0841b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Portfólio Pedro Fellipe</title>
   </head>
   <body>
     <!-- HOME -->
 
     <header>
-      <nav class="nav-home">
+      <nav class="nav-home" id="navbar">
         <ul class="list-home">
-          <li><button class="header-btn" onclick="location.href='#home'">Home</button></li>
-          <li><button class="header-btn" onclick="location.href='#about-me'">Sobre mim</button></li>
-          <li><button class="header-btn" onclick="location.href='#projects'">Projetos</button></li>
-          <li><button class="header-btn" onclick="location.href='#contacts'">Contato</button></li>
+          <li><button class="header-btn" id="nav-home" onclick="location.href='#home'">Home</button></li>
+          <li><button class="header-btn" id="nav-about-me" onclick="location.href='#about-me'">Sobre mim</button></li>
+          <li><button class="header-btn" id="nav-projects" onclick="location.href='#projects'">Projetos</button></li>
+          <li><button class="header-btn" id="nav-contacts" onclick="location.href='#contacts'">Contato</button></li>
         </ul>
       </nav>
     </header>
 
     <section class="home" id="home">
       <p class="paragraph-home-1">Olá, eu sou o Pedro,</p>
-      <p class="paragraph-home-2">Desenvolvedor Web</p>
+      <p class="paragraph-home-2">Scrum Master Júnior</p>
     </section>
     <div class="btn-home">
       <button class="btn-home-1"><a href="https://www.linkedin.com/in/pedrol1pe/" target="_blank">LinkedIn</a></button>
-      <button class="btn-home-2"><a href="#">Baixe meu currículo</a></button>
+      <button class="btn-home-2"><a href="#" id="swipeButton" >Baixe meu currículo</a></button>
     </div>
 
     <!-- SOBRE MIM -->
@@ -36,9 +37,8 @@
       <h1 class="title-about-me">Sobre mim</h1>
       <div class="line-about-me"></div>
       <p class="paragraph-about-me">
-        Me chamo Pedro Fellipe, tenho 21 anos, estou me graduando me Análise e Desenvolvimento de Sistemas, sou um amante da programação e tenho conhecimento das linguagens de
-        programação Java e JavaScript e também as linguagens de marcação e estilização HTML5 e CSS respectivamente, compreendo as frameworks Figma, Bootstrap e as ferramentas de
-        Git e GitHub.
+        Me chamo Pedro Fellipe, tenho 21 anos, estou me graduando me Análise e Desenvolvimento de Sistemas, sou um amante das metodologias ágeis e tenho conhecimento das
+        metodologias Scrum, Kanban, OKR e XP, compreendo a framework Scrum.
       </p>
       <img class="img-about-me" src="images/FotoPedroCopia.jpg" alt="" />
     </section>
@@ -51,14 +51,14 @@
         <p class="paragraph-en-formation">Fev. 2022 - Jul. 2022</p>
       </div>
       <div class="formation-2">
-        <h2 class="title-f.end-formation">Basic Front-End</h2>
-        <h3 class="title5-f-end-formation">Centro Universitário União das Américas Descomplica</h3>
-        <p class="paragraph-f.end-formation">Abr. 2024</p>
-      </div>
-      <div class="formation-3">
         <h2 class="title-programmer-formation">Programmer</h2>
         <h3 class="title5-programmer-formation">Centro Universitário União das Américas Descomplica</h3>
         <p class="paragraph-programmer-formation">Jul. 2024</p>
+      </div>
+      <div class="formation-3">
+        <h2 class="title-f.end-formation">Trabalhando em Equipes Ágeis</h2>
+        <h3 class="title5-f-end-formation">DIO - Digital Innovation One</h3>
+        <p class="paragraph-f.end-formation">Set. 2024</p>
       </div>
     </section>
     <section class="projects" id="projects">
@@ -68,9 +68,13 @@
     </section>
     <section class="contacts-social-media" id="contacts">
       <div class="contacts">
-        <h1 class="title-contacts">Contatos</h1>
+        <h1 class="title-contacts">Conecte-se Comigo</h1>
         <div class="line-contacts"></div>
-        <p class="paragraph-contacts">Estou buscando oportunidades de emprego em tempo integral, mas se tiver propostas de estágio e freelancer, não hesite em me contactar.</p>
+        <p class="paragraph-contacts">
+          Estou ativamente buscando oportunidades de emprego em tempo integral, bem como projetos freelancer ou estágios que desafiem e expandam minhas habilidades. Se você tem
+          propostas ou quer discutir possíveis colaborações, por favor, sinta-se à vontade para entrar em contato comigo. Estou ansioso para explorar como posso contribuir para o
+          seu sucesso.
+        </p>
       </div>
       <div class="social-media">
         <h1 class="title-social-media">Redes Sociais</h1>
@@ -79,7 +83,7 @@
         <div class="icons-social-media">
           <div class="icon-email">
             <i class="fa-regular fa-envelope" id="icon-email"></i>
-            <a class="a-social-media" href="mailto:pdr0ctt@gmail.com">pdr0ctt@gmail.com</a>
+            <a class="a-social-media" href="mailto:scrum">scrumpedro@gmail.com</a>
           </div>
 
           <div class="icon-linkedin">
@@ -98,4 +102,5 @@
       <p class="footer">&copy; Desenvolvido por Pedro Fellipe - 2024</p>
     </footer>
   </body>
+  <script src="script.js"></script>
 </html>
